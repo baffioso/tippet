@@ -1,0 +1,40 @@
+.container {
+    height: 100%;
+    position: relative;
+
+    .next-submit {
+        position: fixed;
+        bottom: 38px;
+        left: 0px;
+        width: 100%;
+        z-index: 1;
+        text-align: center;
+
+        button {
+            font-size: large;
+            padding: 10px;
+        }
+    }
+}
+
+.show-map {
+    display: inline;
+}
+
+.hide-map {
+    display: none;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.image {
+    text-align: center !important;
+}

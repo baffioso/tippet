@@ -1,0 +1,49 @@
+<div class="container">
+    <mat-horizontal-stepper linear #stepper selectedIndex="index" (selectionChange)="selectionChange($event)">
+        <mat-step label="Hvor" state="location">
+            <app-address [address]="nearestAddress" [withinMunicipality]="withinMunicipality"></app-address>
+            <div *ngIf="nearestAddress && withinMunicipality" class="next-submit">
+                <button mat-raised-button color="primary" matStepperNext>Godkend placering</button>
+            </div>
+        </mat-step>
+        <mat-step label="Hvad" state="list">
+            <app-category (selected)="next(stepper)"></app-category>
+        </mat-step>
+        <mat-step label="Foto" state="photo">
+            <h3>Billede og Beskrivelse</h3>
+            <br><br>
+            <div class=image”>
+                <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <mat-icon>add_a_photo</mat-icon>
+                </button>
+            </div>
+            <br><br><br>
+            <form class="example-form">              
+                <mat-form-field class="example-full-width">
+                  <mat-label>Beskrivelse</mat-label>
+                  <textarea matInput placeholder="Beskriv problemet"></textarea>
+                </mat-form-field>
+              </form>
+            <div class="next-submit">
+                <button mat-raised-button color="primary" matStepperNext>Indsend</button>
+            </div>
+        </mat-step>
+
+        <!-- Icon overrides. -->
+        <ng-template matStepperIcon="location">
+            <mat-icon>location_on</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="list">
+            <mat-icon>list</mat-icon>
+        </ng-template>
+        <ng-template matStepperIcon="photo">
+            <mat-icon>camera_alt</mat-icon>
+        </ng-template>
+
+    </mat-horizontal-stepper>
+    <!-- Avoid map rerender then going back to map by using css display property -->
+    <app-map [ngClass]="{
+        'show-map': showMap,
+        'hide-map': !showMap
+    }"></app-map>
+</div>

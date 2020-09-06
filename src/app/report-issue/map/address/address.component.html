@@ -1,0 +1,4 @@
+<div class="container">
+    <h3 *ngIf="!withinMunicipality" class="outside">Den valgte placering er udenfor kommunen</h3>
+    <h3 *ngIf="withinMunicipality">{{address.message}}</h3>
+</div>
