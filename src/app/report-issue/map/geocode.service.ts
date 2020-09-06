@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { LngLatLike } from 'mapbox-gl';
 import { Observable } from 'rxjs';
 import {map} from 'rxjs/operators';
-import { GeocodeAddress } from '../interfaces/interfaces';
+import { GeocodeAddress } from '../../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'

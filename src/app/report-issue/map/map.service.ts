@@ -70,7 +70,7 @@ export class MapService {
     this.currentLocation = center;
 
     // Check if current location is within municipality
-    const isWithin = booleanPointInPolygon([center.lng, center.lat], kommune.features[0]);
+    const isWithin = booleanPointInPolygon([center.lng, center.lat], kommune.features[0] as any);
     this.withinMunicipality.next(isWithin);
 
     // Only reversegeocode if within municipality
@@ -115,7 +115,7 @@ export class MapService {
     if (!this.mapGl.getSource('kommunegr')) {
       this.mapGl.addSource('kommunegr', {
         type: 'geojson',
-        data: kommune
+        data: kommune as any
       });
     }
 
