@@ -60,6 +60,7 @@ export class MapService {
   }
 
   onLoad(): void {
+    this.mapGl.resize();
     this.addLayers();
   }
 

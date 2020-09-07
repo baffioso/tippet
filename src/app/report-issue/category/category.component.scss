@@ -1,19 +1,11 @@
-.container {
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
+.level-1 {
+    background-color: rgb(245, 245, 245);
+}
 
+.level-2 {
+    background-color: rgb(250, 250, 250);
+}
 
-    .card {
-        padding: 10px;
-        width: 100%;
-        height: 30px;
-        border: 1px solid grey;
-
-        .img {
-            width: 40%;
-            height: 100px;
-
-        }
-    }
+.level-3 {
+    background-color: rgb(255, 255, 255);
 }

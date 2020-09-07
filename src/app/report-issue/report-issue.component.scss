@@ -25,16 +25,45 @@
     display: none;
 }
 
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
+::ng-deep .mat-horizontal-stepper-header-container {
+    position: fixed;
+    top: 0;
 }
 
-.example-full-width {
-    width: 100%;
+::ng-deep .mat-stepper-horizontal {
+    min-height: 140px;
 }
 
-.image {
-    text-align: center !important;
+::ng-deep .mat-horizontal-content-container {
+    position: absolute !important;
+    overflow: auto !important;
+    top: 90px;
+    height: calc(100% - 116px);
+}
+
+.documentaion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+        text-align: center;
+    }
+
+    .form {
+        margin-top: 50px;
+        min-width: 150px;
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    .input-full-width {
+        width: 100%;
+    }
+    
+    .image {
+        margin-top: 50px;
+        text-align: center;
+    }
+
 }

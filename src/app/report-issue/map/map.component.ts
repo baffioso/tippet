@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { MapService } from './map.service';
 
 @Component({
@@ -6,12 +6,12 @@ import { MapService } from './map.service';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements AfterViewInit {
   isAerial = false;
 
   constructor(private mapService: MapService) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.mapService.createMap();
   }
 

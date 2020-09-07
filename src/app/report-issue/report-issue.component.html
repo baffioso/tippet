@@ -10,22 +10,24 @@
             <app-category (selected)="next(stepper)"></app-category>
         </mat-step>
         <mat-step label="Foto" state="photo">
-            <h3>Billede og Beskrivelse</h3>
-            <br><br>
-            <div class=image”>
-                <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-                    <mat-icon>add_a_photo</mat-icon>
-                </button>
-            </div>
-            <br><br><br>
-            <form class="example-form">              
-                <mat-form-field class="example-full-width">
-                  <mat-label>Beskrivelse</mat-label>
-                  <textarea matInput placeholder="Beskriv problemet"></textarea>
-                </mat-form-field>
-              </form>
-            <div class="next-submit">
-                <button mat-raised-button color="primary" matStepperNext>Indsend</button>
+            <div class="documentaion">
+                <h3>Billede og Beskrivelse</h3>
+                <div class="image">
+                    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                        <mat-icon>add_a_photo</mat-icon>
+                    </button>
+                </div>
+                <div>
+                    <form class="form">
+                        <mat-form-field class="input-full-width">
+                            <mat-label>Beskrivelse</mat-label>
+                            <textarea matInput placeholder="Beskriv problemet" rows="4"></textarea>
+                        </mat-form-field>
+                    </form>
+                </div>
+                <div class="next-submit">
+                    <button mat-raised-button color="primary" matStepperNext>Indsend</button>
+                </div>
             </div>
         </mat-step>
 

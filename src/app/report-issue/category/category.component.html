@@ -1,20 +1,20 @@
 <div class="container">
     <mat-accordion>
-        <mat-expansion-panel *ngFor="let cat of categories">
+        <mat-expansion-panel *ngFor="let cat of categories" class="level-1">
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     {{cat.text}}
                 </mat-panel-title>
             </mat-expansion-panel-header>
 
-            <mat-expansion-panel *ngFor="let elem of cat.elementTypes">
+            <mat-expansion-panel *ngFor="let elem of cat.elementTypes" class="level-2">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
                         {{elem.text}}
                     </mat-panel-title>
                 </mat-expansion-panel-header>
 
-                <mat-expansion-panel *ngFor="let e of elem.categories" hideToggle (click)="next()">
+                <mat-expansion-panel *ngFor="let e of elem.categories" hideToggle (click)="next()" class="level-3">
                     <mat-expansion-panel-header>
                         <mat-panel-title>
                             {{e.text}}
