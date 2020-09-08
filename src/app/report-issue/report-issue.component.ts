@@ -40,6 +40,9 @@ export class ReportIssueComponent implements OnInit, OnDestroy {
       this.showMap = false;
     } else {
       this.showMap = true;
+      setTimeout(() => {
+        this.mapService.mapGl.resize();
+      }, 500);
     }
   }
 
