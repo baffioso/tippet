@@ -42,7 +42,16 @@ export class ReportIssueComponent implements OnInit, OnDestroy {
       this.showMap = true;
       setTimeout(() => {
         this.mapService.mapGl.resize();
-      }, 500);
+      }, 200);
+    }
+  }
+
+  animationDone(e: StepperSelectionEvent): void {
+    if (e.selectedIndex === 0) {
+      // this.showMap = true;
+      // setTimeout(() => {
+      //   this.mapService.mapGl.resize();
+      // }, 200);
     }
   }
 

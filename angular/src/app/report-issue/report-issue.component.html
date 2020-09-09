@@ -1,14 +1,18 @@
 <div class="container">
-    <mat-horizontal-stepper linear #stepper selectedIndex="index" (selectionChange)="selectionChange($event)">
+    <mat-horizontal-stepper linear #stepper selectedIndex="index" (selectionChange)="selectionChange($event)"
+        (animationDone)="animationDone(stepper)">
+        
         <mat-step label="Hvor" state="location">
             <app-address [address]="nearestAddress" [withinMunicipality]="withinMunicipality"></app-address>
             <div *ngIf="nearestAddress && withinMunicipality" class="next-submit">
                 <button mat-raised-button color="primary" matStepperNext>Godkend placering</button>
             </div>
         </mat-step>
+        
         <mat-step label="Hvad" state="list">
             <app-category (selected)="next(stepper)"></app-category>
         </mat-step>
+        
         <mat-step label="Foto" state="photo">
             <div class="documentaion">
                 <h3>Billede og Beskrivelse</h3>
