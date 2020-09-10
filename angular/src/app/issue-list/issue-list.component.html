@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Dine praj</h1>
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let issue of issues">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{issue.category}}
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{issue.timestamp | date}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <app-issue-detail [issue]="issue"></app-issue-detail>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

@@ -1,2 +1,16 @@
-<app-report-issue>
+<app-report-issue *ngIf="selectedView === 'report-issue'" class="test">
 </app-report-issue>
+<app-issue-list *ngIf="selectedView === 'issue-list'">
+</app-issue-list>
+<div class="container">
+    <mat-button-toggle-group #group="matButtonToggleGroup" [value]="selectedView" (change)="selectView(group.value)" name="fontStyle" aria-label="Font Style" >
+        <mat-button-toggle class="tgl-btn" value="report-issue">
+            <mat-icon>location_on</mat-icon>  Giv et praj
+        </mat-button-toggle>
+        <mat-button-toggle class="tgl-btn" value="issue-list">
+            <mat-icon>
+                format_list_bulleted
+            </mat-icon>  Dine praj
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+</div>

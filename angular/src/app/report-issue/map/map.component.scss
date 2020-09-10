@@ -1,6 +1,6 @@
 .map-container {
     width: 100%;
-    height: calc(100% - 140px);
+    height: calc(100% - 150px);
     position: absolute;
 }
 
@@ -8,18 +8,18 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 5px;
     z-index: 1;
 }
 
 .aerial {
     background-image: url('../../../assets/images/aerial.png');
-    background-size: 60px 60px;
+    background-size: 70px 70px;
 }
 
 .streets {
     background-image: url('../../../assets/images/streets.png');
-    background-size: 60px 60px;
+    background-size: 70px 70px;
 }

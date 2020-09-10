@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'giv-et-praj';
+  selectedView: 'report-issue' | 'issue-list' = 'report-issue';
+
+  selectView(name: any): void {
+    this.selectedView = name;
+  }
 }

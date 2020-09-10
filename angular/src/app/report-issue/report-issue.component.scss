@@ -1,9 +1,9 @@
 .container {
-    height: 100%;
+    height: calc(100% - 60px);
     position: relative;
 
     .next-submit {
-        position: fixed;
+        position: absolute;
         bottom: 38px;
         left: 0px;
         width: 100%;
@@ -39,8 +39,7 @@
     position: absolute !important;
     overflow: auto !important;
     top: 90px;
-    height: calc(100% - 116px);
-    width: calc(100% - 50px);
+    width: calc(100% - 48px);
 }
 
 .documentaion {
